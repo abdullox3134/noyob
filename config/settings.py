@@ -80,6 +80,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
+CSRF_TRUSTED_ORIGINS = ['http://noyob.mebel-zakaz.uz']
+
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
