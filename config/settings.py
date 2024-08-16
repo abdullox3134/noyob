@@ -147,7 +147,7 @@ CORS_ALLOW_HEADERS = list(default_headers) + [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 JAZZMIN_SETTINGS = {
-    "site_title": "Foydali Havolalar",
+    "site_title": "Noyob Mebel",
     "site_brand": "Noyob Mebel",
     "site_logo": "noyob.jpg",
     "welcome_sign": "Xush Kelibsiz",

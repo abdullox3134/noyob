@@ -117,3 +117,17 @@ class Podobuv(models.Model):
     class Meta:
         verbose_name = "Podobuv"
         verbose_name_plural = "Podobuv"
+
+
+class Image(models.Model):
+    image = models.ImageField(upload_to='media/images/')
+    kravat = models.ForeignKey(Kravat, related_name='images', on_delete=models.CASCADE, blank=True, null=True)
+    shkaf = models.ForeignKey(Shkaf, related_name='images', on_delete=models.CASCADE, blank=True, null=True)
+    prixoshka = models.ForeignKey(Prixoshka, related_name='images', on_delete=models.CASCADE, blank=True, null=True)
+    parta = models.ForeignKey(Parta, related_name='images', on_delete=models.CASCADE, blank=True, null=True)
+    tumba = models.ForeignKey(Tumba, related_name='images', on_delete=models.CASCADE, blank=True, null=True)
+    podobuv = models.ForeignKey(Podobuv, related_name='images', on_delete=models.CASCADE, blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Image {self.id} for {self.kravat or self.shkaf or self.prixoshka or self.parta or self.tumba or self.podobuv}"

@@ -4,8 +4,8 @@ from rest_framework import filters
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 
-from about.models import Slider, Location, Connection, Card
-from about.serializers import SliderSerializer, LocationSerializer, ConnectionSerializer, CardSerializer
+from about.models import Slider, Location, Connection
+from about.serializers import SliderSerializer, LocationSerializer, ConnectionSerializer
 
 
 class SliderListView(ListAPIView):
@@ -53,20 +53,4 @@ class ConnectionListView(ListAPIView):
 def connectiondetail(request, pk):
     connection = get_object_or_404(Connection, pk=pk)
     serializer = ConnectionSerializer(connection, context={'request': request})
-    return Response(serializer.data)
-
-
-class CardListView(ListAPIView):
-    search_fields = ['title']
-    filter_backends = (filters.SearchFilter,)
-    serializer_class = CardSerializer
-
-    def get_queryset(self):
-        return Card.objects.all()
-
-
-@api_view(['GET'])
-def carddetail(request, pk):
-    card = get_object_or_404(Card, pk=pk)
-    serializer = CardSerializer(card, context={'request': request})
     return Response(serializer.data)

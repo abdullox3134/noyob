@@ -47,20 +47,3 @@ class Connection(models.Model):
         verbose_name = 'Connection'
         verbose_name_plural = 'Connections'
 
-
-class Card(models.Model):
-    card_1 = models.CharField(max_length=200, blank=True, null=True)
-    card_1_name = models.CharField(max_length=200, blank=True, null=True)
-    card_2 = models.CharField(max_length=200, blank=True, null=True)
-    card_2_name = models.CharField(max_length=200, blank=True, null=True)
-    card_3 = models.CharField(max_length=200, blank=True, null=True)
-    card_3_name = models.CharField(max_length=200, blank=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
-    updated_at = models.DateTimeField(auto_now=True, blank=True, null=True)
-
-    def __str__(self):
-        return self.card_1
-
-    class Meta:
-        verbose_name = 'Card'
-        verbose_name_plural = 'Cards'

@@ -1,7 +1,7 @@
 from django.urls import path
 
 from about.views import SliderListView, sliderdetail, LocationListView, locationdetail, ConnectionListView, \
-    connectiondetail, CardListView, carddetail
+    connectiondetail
 
 urlpatterns = [
     path('slider/', SliderListView.as_view(), name='slider-list'),
@@ -12,7 +12,4 @@ urlpatterns = [
 
     path('connection/', ConnectionListView.as_view(), name='connection-list'),
     path('connection/<int:pk>/', connectiondetail, name='connection-detail'),
-
-    path('card/', CardListView.as_view(), name='card-list'),
-    path('card/<int:pk>/', carddetail, name='card-detail'),
 ]

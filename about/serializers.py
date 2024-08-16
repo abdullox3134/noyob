@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from about.models import Slider, Location, Connection, Card
+from about.models import Slider, Location, Connection
 
 
 class SliderSerializer(serializers.ModelSerializer):
@@ -20,9 +20,3 @@ class ConnectionSerializer(serializers.ModelSerializer):
         model = Connection
         fields = ('id', 'telefon', 'email', 'telegram', 'instagram', 'facebook', 'created_at', 'updated_at',)
 
-
-class CardSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Card
-        fields = ('id', 'card_1', 'card_1_name', 'card_2', 'card_2_name', 'card_3', 'card_3_name', 'created_at',
-                  'updated_at',)
