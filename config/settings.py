@@ -80,7 +80,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
-CSRF_TRUSTED_ORIGINS = ['http://noyob.mebel-zakaz.uz']
+CSRF_TRUSTED_ORIGINS = ['http://subdomain.noyobmebel.uz']
 
 
 # Database

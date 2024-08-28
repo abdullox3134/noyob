@@ -40,7 +40,7 @@ class PodobuvImageInline(admin.TabularInline):
 
 @admin.register(Kravat)
 class KravatAdmin(admin.ModelAdmin):
-    list_display = ('name', 'skidka', 'order', 'created_at', 'updated_at')
+    list_display = ('name', 'skidka', 'order', 'price', 'created_at', 'updated_at')
     search_fields = ('name',)
     fields = ('name', 'description', 'price', 'skidka', 'image', 'order',)
     inlines = [KravatImageInline]
@@ -48,7 +48,7 @@ class KravatAdmin(admin.ModelAdmin):
 
 @admin.register(Shkaf)
 class ShkafAdmin(admin.ModelAdmin):
-    list_display = ('name', 'skidka', 'order', 'created_at', 'updated_at')
+    list_display = ('name', 'skidka', 'order', 'price', 'created_at', 'updated_at')
     search_fields = ('name',)
     fields = ('name', 'description', 'boyi', 'eni', 'price', 'skidka', 'image', 'order',)
     inlines = [ShkafImageInline]
@@ -56,7 +56,7 @@ class ShkafAdmin(admin.ModelAdmin):
 
 @admin.register(Prixoshka)
 class PrixoshkaAdmin(admin.ModelAdmin):
-    list_display = ('name', 'skidka', 'order', 'created_at', 'updated_at')
+    list_display = ('name', 'skidka', 'order', 'price', 'created_at', 'updated_at')
     search_fields = ('name',)
     fields = ('name', 'description', 'boyi', 'eni', 'price', 'skidka', 'image', 'order',)
     inlines = [PrixoshkaImageInline]
@@ -64,7 +64,7 @@ class PrixoshkaAdmin(admin.ModelAdmin):
 
 @admin.register(Parta)
 class PartaAdmin(admin.ModelAdmin):
-    list_display = ('name', 'skidka', 'order', 'created_at', 'updated_at')
+    list_display = ('name', 'skidka', 'order', 'price', 'created_at', 'updated_at')
     search_fields = ('name',)
     fields = ('name', 'description', 'boyi', 'eni', 'price', 'skidka', 'image', 'order',)
     inlines = [PartaImageInline]
@@ -72,7 +72,7 @@ class PartaAdmin(admin.ModelAdmin):
 
 @admin.register(Tumba)
 class TumbaAdmin(admin.ModelAdmin):
-    list_display = ('name', 'skidka', 'order', 'created_at', 'updated_at')
+    list_display = ('name', 'skidka', 'order', 'price', 'created_at', 'updated_at')
     search_fields = ('name',)
     fields = ('name', 'description', 'boyi', 'eni', 'price', 'skidka', 'image', 'order',)
     inlines = [TumbaImageInline]
@@ -80,7 +80,7 @@ class TumbaAdmin(admin.ModelAdmin):
 
 @admin.register(Podobuv)
 class PodobuvAdmin(admin.ModelAdmin):
-    list_display = ('name', 'skidka', 'order', 'created_at', 'updated_at')
+    list_display = ('name', 'skidka', 'order', 'price', 'created_at', 'updated_at')
     search_fields = ('name',)
     fields = ('name', 'description', 'boyi', 'eni', 'price', 'skidka', 'image', 'order',)
     inlines = [PodobuvImageInline]

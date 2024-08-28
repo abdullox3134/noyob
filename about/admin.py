@@ -14,7 +14,7 @@ class SliderAdmin(admin.ModelAdmin):
 class LocationAdmin(admin.ModelAdmin):
     list_display = ('title', 'created_at', 'updated_at')
     search_fields = ('title',)
-    fields = ('title', 'lat', 'long',)
+    fields = ('title',)
 
 
 @admin.register(Connection)

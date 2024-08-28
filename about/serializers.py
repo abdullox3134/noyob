@@ -12,7 +12,7 @@ class SliderSerializer(serializers.ModelSerializer):
 class LocationSerializer(serializers.ModelSerializer):
     class Meta:
         model = Location
-        fields = ('id', 'title', 'lat', 'long', 'created_at', 'updated_at',)
+        fields = ('id', 'title', 'created_at', 'updated_at',)
 
 
 class ConnectionSerializer(serializers.ModelSerializer):

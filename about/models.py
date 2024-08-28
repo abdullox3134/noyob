@@ -18,8 +18,8 @@ class Slider(models.Model):
 
 class Location(models.Model):
     title = models.CharField(max_length=200)
-    lat = models.DecimalField(max_digits=22, decimal_places=18, default=0)
-    long = models.DecimalField(max_digits=22, decimal_places=18, default=0)
+    # lat = models.DecimalField(max_digits=22, decimal_places=18, default=0)
+    # long = models.DecimalField(max_digits=22, decimal_places=18, default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
